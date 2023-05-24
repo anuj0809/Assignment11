@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "eb9d6ec5-2099-4b26-87f8-f66151759428",
+		"name": "Ajargh_Kreation_Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14565815",
+		"_collection_link": "https://speeding-shadow-289595.postman.co/workspace/New-Team-Workspace~acef775c-ac50-4610-9b1a-f51b839cf537/collection/20759709-eb9d6ec5-2099-4b26-87f8-f66151759428?action=share&creator=14565815&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "safaid",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "safaidansari07@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "safaid",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "safaidansari07@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6InNhZmFpZCIsImVtYWlsIjoic2FmYWlkYW5zYXJpMDdAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMjNUMTE6MjI6MjYuMTA0WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDUtMjNUMTE6MjI6MjYuMTA0WiIsImlhdCI6MTY4NDg0MTM2OSwiZXhwIjoxNjg1MDE0MTY5fQ.QWyQQyithfLXOKypVrlQodvJpVvwDToPjXtAhahg7V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "First Post",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Hey i am new post ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read a single post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "First Post",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Hey i am new post ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read all posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "First Post",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Hey i am new post ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6InNhZmFpZCIsImVtYWlsIjoic2FmYWlkYW5zYXJpMDdAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMjNUMTE6MjI6MjYuMTA0WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDUtMjNUMTE6MjI6MjYuMTA0WiIsImlhdCI6MTY4NDg0MTM2OSwiZXhwIjoxNjg1MDE0MTY5fQ.QWyQQyithfLXOKypVrlQodvJpVvwDToPjXtAhahg7V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "fist post updated ",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Hey i am updated post ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6InNhZmFpZCIsImVtYWlsIjoic2FmYWlkYW5zYXJpMDdAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMjNUMTE6MjI6MjYuMTA0WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDUtMjNUMTE6MjI6MjYuMTA0WiIsImlhdCI6MTY4NDg0MTM2OSwiZXhwIjoxNjg1MDE0MTY5fQ.QWyQQyithfLXOKypVrlQodvJpVvwDToPjXtAhahg7V8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "fist post updated ",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Hey i am updated post ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
